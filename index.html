@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafi Ullah — Portfolio 2025</title>
+<meta name="description" content="Rafi Ullah — Creative Flutter developer & AI builder. Cross-platform mobile apps, Blazor Server architectures, and generative AI video.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- background layers: dotted grid + glow blobs, fixed behind everything -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+<!-- custom magnetic cursor ring (desktop only, progressive enhancement) -->
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ======================= HEADER ======================= -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top">
+    <span class="brand-mark">
+      <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true">
+        <path d="M2 9V2h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M30 23v7h-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="16" y="21" font-family="Archivo Black" font-size="14" fill="currentColor" text-anchor="middle">R</text>
+      </svg>
+    </span>
+    <span class="brand-text">
+      <span class="brand-name">RAFI ULLAH</span>
+      <span class="brand-role">AI &amp; MOBILE ENGINEER</span>
+    </span>
+  </a>
+
+  <nav class="pill-nav" id="pillNav">
+    <span class="pill-highlight" id="pillHighlight" aria-hidden="true"></span>
+    <a href="#profile" class="pill-link active" data-section="profile">Profile</a>
+    <a href="#projects" class="pill-link" data-section="projects">Project</a>
+    <a href="#contact" class="pill-link" data-section="contact">Contact Person</a>
+  </nav>
+
+  <a class="resume-btn" href="assets/Rafi_Ullah_Resume.pdf" download>
+    <i class="fas fa-arrow-down"></i> Resume
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+
+    <div class="hero-avatar-wrap" id="avatarTilt">
+      <div class="hero-avatar-card">
+        <svg class="avatar-illustration" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" fill="#12283a"/>
+          <path d="M40 165c0-38 27-65 60-65s60 27 60 65" fill="#0b1c2a"/>
+          <circle cx="100" cy="88" r="46" fill="#f2c49b"/>
+          <path d="M54 78c0-34 20-56 46-56s46 22 46 56c0-8-6-14-10-14-4-14-16-22-36-22s-32 8-36 22c-4 0-10 6-10 14z" fill="#101820"/>
+          <rect x="60" y="82" width="34" height="20" rx="9" fill="#0d1f2b" stroke="#22e5e5" stroke-width="3"/>
+          <rect x="106" y="82" width="34" height="20" rx="9" fill="#0d1f2b" stroke="#22e5e5" stroke-width="3"/>
+          <line x1="94" y1="90" x2="106" y2="90" stroke="#22e5e5" stroke-width="3"/>
+          <path d="M70 120q30 18 60 0" fill="none" stroke="#7a3e2a" stroke-width="4" stroke-linecap="round"/>
+          <path d="M40 172c4-30 26-50 60-50s56 20 60 50z" fill="#0d1420"/>
+          <path d="M92 124c4 6 12 6 16 0l6 10c-8 8-20 8-28 0z" fill="#e2412e"/>
+        </svg>
+        <div class="avatar-readout">
+          <span class="readout-id">SYS ID: RU-05</span>
+          <span class="readout-main">5TH SEM CS</span>
+          <span class="readout-sub">CGPA 3.13 / 4.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-copy">
+      <h1 class="hero-title">
+        PORTFOLIO
+        <span class="hero-year">2025</span>
+      </h1>
+
+      <p class="hero-tag"><span class="tag-dot"></span> Creative Flutter Developer &amp; AI Builder</p>
+
+      <p class="hero-desc">
+        Undergraduate student at <strong>Air University Islamabad</strong> crafting offline-first Flutter
+        architectures, solid Blazor systems, and generative AI video experiments.
+      </p>
+
+      <div class="hud-links">
+        <button class="hud-link" id="hudReel">
+          <span class="hud-label">Start Reel</span><span class="hud-key">[Enter]</span>
+        </button>
+        <button class="hud-link" id="hudSkills">
+          <span class="hud-label">Skills &amp; Spec</span><span class="hud-key">[Tab]</span>
+        </button>
+        <button class="hud-link" id="hudPing">
+          <span class="hud-label">Direct Ping</span><span class="hud-key">[Esc]</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-footer">
+    <div class="hero-footer-left">
+      <span class="status-dot"></span> Open for Creative Builds 2025
+      <span class="sep">|</span>
+      Swat &rarr; Islamabad, PK
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Flutter / Firebase</span><span>Blazor / C#</span><span>Gemini AI Agents</span><span>JavaScript</span><span>C++</span>
+        <span>Flutter / Firebase</span><span>Blazor / C#</span><span>Gemini AI Agents</span><span>JavaScript</span><span>C++</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROFILE / ABOUT ======================= -->
+<section class="section" id="profile">
+  <div class="section-nav-wrap">
+    <nav class="pill-nav pill-nav--inline">
+      <span class="pill-highlight" aria-hidden="true"></span>
+      <a href="#profile" class="pill-link active" data-section="profile">Profile</a>
+      <a href="#projects" class="pill-link" data-section="projects">Project</a>
+      <a href="#contact" class="pill-link" data-section="contact">Contact Person</a>
+    </nav>
+  </div>
+
+  <div class="profile-grid">
+    <div class="id-card reveal">
+      <span class="id-card-kicker">Hello, I am</span>
+      <h3 class="id-card-name">Rafi Ullah</h3>
+            <div class="id-card-photo">
+        <img src="assets/rafi.jpeg" alt="Rafi Ullah" class="id-card-real-photo">
+      </div>
+      <a href="https://airuniversity.edu.pk" target="_blank" rel="noopener" class="id-card-uni">Air University &middot; Islamabad</a>
+      <p class="id-card-native">Native: Swat, Khyber Pakhtunkhwa</p>
+    </div>
+
+    <div class="profile-content">
+      <h2 class="section-heading"><span class="heading-bullet heading-bullet--cyan"></span>About Me</h2>
+      <p class="about-text reveal">
+        Hi, I'm Rafi Ullah. I specialize in building robust cross-platform mobile applications in Flutter
+        and architecting enterprise web applications powered by Blazor Server and .NET. Alongside traditional
+        software engineering, I direct creative AI content and experiment with generative media engines to
+        merge logic with visual impact.
+      </p>
+
+      <h2 class="section-heading"><span class="heading-bullet heading-bullet--red"></span>Software Skills</h2>
+      <div class="skills-row reveal">
+        <div class="skill-badge"><span class="skill-icon skill-icon--flutter"><i class="fas fa-mobile-screen"></i></span><span>Flutter</span></div>
+        <div class="skill-badge"><span class="skill-icon skill-icon--firebase"><i class="fas fa-fire"></i></span><span>Firebase</span></div>
+        <div class="skill-badge"><span class="skill-icon skill-icon--blazor"><i class="fas fa-table-cells-large"></i></span><span>Blazor</span></div>
+        <div class="skill-badge"><span class="skill-icon skill-icon--gemini"><i class="fas fa-wand-magic-sparkles"></i></span><span>Gemini AI</span></div>
+        <div class="skill-badge"><span class="skill-icon skill-icon--dotnet"><i class="fas fa-code"></i></span><span>C# / .NET</span></div>
+        <div class="skill-badge"><span class="skill-icon skill-icon--sql"><i class="fas fa-database"></i></span><span>SQL Server</span></div>
+        <div class="skill-badge"><span class="skill-icon skill-icon--asm"><i class="fas fa-microchip"></i></span><span>x86 ASM</span></div>
+        <div class="skill-badge"><span class="skill-icon skill-icon--cpp"><i class="fas fa-plus"></i></span><span>C++</span></div>
+      </div>
+
+      <div class="edu-exp-grid">
+        <div class="edu-col reveal">
+          <h3 class="mini-heading">Education</h3>
+          <div class="mini-item">
+            <span class="mini-dot mini-dot--cyan"></span>
+            <div>
+              <p class="mini-title">2022 — Present</p>
+              <p class="mini-body">Air University Islamabad</p>
+              <p class="mini-meta">BS Computer Science &middot; <span class="accent-cyan">CGPA 3.13</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="exp-col reveal">
+          <h3 class="mini-heading">Experience</h3>
+          <div class="mini-item">
+            <span class="mini-dot mini-dot--red"></span>
+            <div>
+              <p class="mini-title">Full Stack AI Fellowship</p>
+              <p class="mini-body">Fellowship Graduate</p>
+              <p class="mini-meta">Git/GitHub, JavaScript, Generative Agents</p>
+            </div>
+          </div>
+          <div class="mini-item">
+            <span class="mini-dot mini-dot--red"></span>
+            <div>
+              <p class="mini-title">freeCodeCamp Certified</p>
+              <p class="mini-body">JavaScript Algorithms &amp; Data Structures</p>
+              <p class="mini-meta">Issued September 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mini-heading mini-heading--spaced">Language [Communication &amp; Code]</h3>
+      <div class="lang-bars reveal">
+        <div class="lang-bar">
+          <span class="lang-label">Dart &amp; Flutter</span>
+          <div class="lang-track"><div class="lang-fill lang-fill--cyan" data-pct="95"></div></div>
+          <span class="lang-pct accent-cyan">95%</span>
+        </div>
+        <div class="lang-bar">
+          <span class="lang-label">C# &amp; Blazor</span>
+          <div class="lang-track"><div class="lang-fill lang-fill--purple" data-pct="90"></div></div>
+          <span class="lang-pct accent-purple">90%</span>
+        </div>
+        <div class="lang-bar">
+          <span class="lang-label">C++ &amp; Low-Level</span>
+          <div class="lang-track"><div class="lang-fill lang-fill--orange" data-pct="85"></div></div>
+          <span class="lang-pct accent-orange">85%</span>
+        </div>
+        <div class="lang-bar">
+          <span class="lang-label">English / Urdu</span>
+          <div class="lang-track"><div class="lang-fill lang-fill--red" data-pct="100"></div></div>
+          <span class="lang-pct accent-red">100%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROJECTS ======================= -->
+<section class="section" id="projects">
+  <div class="section-nav-wrap">
+    <nav class="pill-nav pill-nav--inline">
+      <span class="pill-highlight" aria-hidden="true"></span>
+      <a href="#profile" class="pill-link" data-section="profile">Profile</a>
+      <a href="#projects" class="pill-link active" data-section="projects">Project</a>
+      <a href="#contact" class="pill-link" data-section="contact">Contact Person</a>
+    </nav>
+  </div>
+
+  <div class="projects-heading reveal">
+    <h2 class="big-heading">Recap Project <span class="accent-red-text">2025</span> <span class="prod-pill">Prod Ready</span></h2>
+    <p class="projects-subtitle">Mobile Apps &middot; Blazor Server Architectures &middot; Low Level Computing</p>
+  </div>
+
+  <div class="feature-grid">
+
+    <!-- DAIRA -->
+    <article class="feature-card reveal">
+      <div class="feature-top">
+        <span class="feature-tag feature-tag--cyan">Mobile &middot; Flutter + AI</span>
+        <span class="feature-year">2024 — Active</span>
+      </div>
+      <h3 class="feature-title">DAIRA — Smart Productivity</h3>
+      <p class="feature-desc">A comprehensive mobile productivity and quest-based habit companion built on
+        Flutter &amp; Firebase, infused with Google Gemini AI for contextual assistance and real-time cloud sync.</p>
+
+      <div class="daira-showcase">
+        <div class="phone-frame-track">
+          <div class="phone-frame">
+            <img src="assets/daira/1.jpg" alt="DAIRA login screen" loading="lazy">
+          </div>
+          <div class="phone-frame">
+            <img src="assets/daira/2.jpg" alt="DAIRA analytics screen" loading="lazy">
+          </div>
+          <div class="phone-frame">
+            <img src="assets/daira/3.jpg" alt="DAIRA home screen with active quests" loading="lazy">
+          </div>
+        </div>
+        <ul class="feature-checklist">
+          <li><i class="fas fa-check"></i> Offline-first Cache</li>
+          <li><i class="fas fa-check"></i> Gemini Prompt Co-pilot</li>
+          <li><i class="fas fa-check"></i> Cross-Platform iOS/Android</li>
+        </ul>
+      </div>
+
+      <div class="feature-footer">
+        <span class="feature-hashtags">#Flutter #Firebase #Gemini</span>
+        <a class="feature-link" href="https://github.com/rafiullah39" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+
+    <!-- EDUCONNECT -->
+    <article class="feature-card reveal">
+      <div class="feature-top">
+        <span class="feature-tag feature-tag--purple"><i class="fas fa-square"></i> Web &middot; Blazor Server</span>
+        <span class="feature-year">2024</span>
+      </div>
+      <h3 class="feature-title">EduConnect</h3>
+      <p class="feature-desc">Full-scale education portal engineered with SOLID architecture in Blazor Server
+        and .NET, featuring a full framework compatibility migration and role-based permissions.</p>
+
+      <div class="browser-frame">
+        <div class="browser-topbar">
+          <span class="tl tl-red"></span><span class="tl tl-yellow"></span><span class="tl tl-green"></span>
+          <span class="browser-url">educonnect.portal/#/dean-console</span>
+        </div>
+        <div class="browser-screen-track">
+          <img src="assets/educonnect/1.jpg" alt="EduConnect sign-in portal" loading="lazy">
+          <img src="assets/educonnect/2.jpg" alt="EduConnect course management dashboard" loading="lazy">
+          <img src="assets/educonnect/3.jpg" alt="EduConnect academic dean overview" loading="lazy">
+        </div>
+        <div class="browser-tags">
+          <span class="chip chip--purple">SOLID Architecture</span>
+          <span class="chip chip--green">RBAC Permissions</span>
+        </div>
+        <p class="browser-caption">.NET Core &middot; Entity Framework</p>
+      </div>
+
+      <div class="feature-footer">
+        <span class="feature-hashtags">#Blazor #C# #SQL</span>
+        <a class="feature-link" href="https://github.com/rafiullah39" target="_blank" rel="noopener">Case Code <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+  </div>
+
+  <div class="small-grid">
+    <article class="small-card reveal">
+      <div class="small-top">
+        <span class="small-tag accent-cyan"><i class="fas fa-diagram-project"></i> CRM App</span>
+        <span class="feature-year">2024</span>
+      </div>
+      <h4 class="small-title">ClientFlow CRM</h4>
+      <p class="small-desc">Clean client lifecycle and relationship management platform with dynamic
+        reporting dashboards and SQL Server persistence.</p>
+      <div class="small-footer">
+        <span>Blazor / SQL</span>
+        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-cyan">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+
+    <article class="small-card reveal">
+      <div class="small-top">
+        <span class="small-tag accent-red"><i class="fas fa-heart-pulse"></i> Desktop</span>
+        <span class="feature-year">2023</span>
+      </div>
+      <h4 class="small-title">Blood Bank MS</h4>
+      <p class="small-desc">Desktop management suite for hospital blood bank inventory, donor tracking,
+        and emergency blood matching workflows.</p>
+      <div class="small-footer">
+        <span>Java / SQL Server</span>
+        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-red">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+
+    <article class="small-card reveal">
+      <div class="small-top">
+        <span class="small-tag accent-yellow"><i class="fas fa-gear"></i> Hardware / ASM</span>
+        <span class="feature-year">2023</span>
+      </div>
+      <h4 class="small-title">EVM in 8086 ASM</h4>
+      <p class="small-desc">Electronic Voting Machine written right in x86 microprocessor assembly —
+        engineered core candidate voting routines and memory buffers.</p>
+      <div class="small-footer">
+        <span>EMU8086 / ASM</span>
+        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-yellow">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+  </div>
+
+  <!-- ======================= AI VIDEO PLAYGROUND ======================= -->
+  <div class="video-panel reveal">
+    <div class="video-panel-head">
+      <div>
+        <p class="video-kicker">Director Meets Developer</p>
+        <h2 class="big-heading big-heading--sm">AI Video &amp; Promo Playground</h2>
+      </div>
+      <span class="video-badge">Higgsfield AI &middot; Fashion Reels &middot; 4+ Clips</span>
+    </div>
+
+    <div class="video-grid">
+      <button class="video-card video-card--red" data-video="assets/videos/clip1.mp4" data-title="Cinematic Ad Concept">
+        <img src="assets/videos/poster1.jpg" alt="" loading="lazy">
+        <span class="video-play"><i class="fas fa-play"></i></span>
+        <span class="video-caption"><strong>Cinematic Ad Concept</strong><em>Higgsfield Motion</em></span>
+      </button>
+      <button class="video-card video-card--purple" data-video="assets/videos/clip2.mp4" data-title="Fashion Reel Production">
+        <img src="assets/videos/poster2.jpg" alt="" loading="lazy">
+        <span class="video-play"><i class="fas fa-play"></i></span>
+        <span class="video-caption"><strong>Fashion Reel Production</strong><em>Visual Shorts</em></span>
+      </button>
+      <button class="video-card video-card--teal" data-video="assets/videos/clip3.mp4" data-title="AI Promo Campaign">
+        <img src="assets/videos/poster3.jpg" alt="" loading="lazy">
+        <span class="video-play"><i class="fas fa-play"></i></span>
+        <span class="video-caption"><strong>AI Promo Campaign</strong><em>Generative Audio &amp; Cuts</em></span>
+      </button>
+      <button class="video-card video-card--amber" data-video="assets/videos/clip4.mp4" data-title="Brand Film Concept">
+        <img src="assets/videos/poster4.jpg" alt="" loading="lazy">
+        <span class="video-play"><i class="fas fa-play"></i></span>
+        <span class="video-caption"><strong>Brand Film Concept</strong><em>Cinematic Direction</em></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section class="section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <h3 class="mini-heading">Contact Me</h3>
+      <div class="contact-avatar">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="78" fill="#12283a"/>
+          <path d="M28 150c0-34 24-58 52-58s52 24 52 58" fill="#0b1c2a"/>
+          <circle cx="80" cy="70" r="38" fill="#f2c49b"/>
+          <path d="M46 62c0-28 16-46 34-46s34 18 34 46c0-6-5-11-8-11-3-11-13-18-26-18s-23 7-26 18c-3 0-8 5-8 11z" fill="#101820"/>
+          <rect x="52" y="66" width="26" height="15" rx="7" fill="#0d1f2b" stroke="#22e5e5" stroke-width="2.4"/>
+          <rect x="82" y="66" width="26" height="15" rx="7" fill="#0d1f2b" stroke="#22e5e5" stroke-width="2.4"/>
+          <line x1="78" y1="72" x2="82" y2="72" stroke="#22e5e5" stroke-width="2.4"/>
+        </svg>
+      </div>
+      <p class="contact-name">Rafi Ullah</p>
+      <p class="contact-loc accent-cyan">Islamabad, Pakistan</p>
+      <p class="contact-avail">Available Remote / Hybrid</p>
+
+      <div class="contact-links">
+        <a class="contact-row" href="mailto:rafiullahh2005@gmail.com">
+          <span class="contact-icon contact-icon--cyan"><i class="fas fa-envelope"></i></span>
+          rafiullahh2005@gmail.com
+        </a>
+        <a class="contact-row" href="https://github.com/rafiullah39" target="_blank" rel="noopener">
+          <span class="contact-icon"><i class="fab fa-github"></i></span>
+          github.com/rafiullah39
+        </a>
+        <a class="contact-row" href="https://linkedin.com/in/rafi-ullah39" target="_blank" rel="noopener">
+          <span class="contact-icon contact-icon--blue"><i class="fab fa-linkedin"></i></span>
+          linkedin.com/in/rafi-ullah39
+        </a>
+        <a class="contact-row" href="https://instagram.com/rafi__39" target="_blank" rel="noopener">
+          <span class="contact-icon contact-icon--pink"><i class="fab fa-instagram"></i></span>
+          @rafi__39
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-right reveal">
+      <nav class="pill-nav pill-nav--inline">
+        <span class="pill-highlight" aria-hidden="true"></span>
+        <a href="#profile" class="pill-link" data-section="profile">Profile</a>
+        <a href="#projects" class="pill-link" data-section="projects">Project</a>
+        <a href="#contact" class="pill-link active" data-section="contact">Contact Person</a>
+      </nav>
+
+      <h2 class="big-heading">Thank You <span class="hero-year hero-year--inline">2025</span></h2>
+      <p class="projects-subtitle">Got a project, freelance Flutter build, or tech question? Drop a signal.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fName">Name</label>
+            <input type="text" id="fName" name="name" placeholder="Alex Mercer" required>
+          </div>
+          <div class="form-field">
+            <label for="fEmail">Email</label>
+            <input type="email" id="fEmail" name="email" placeholder="alex@domain.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="fMessage">Message / Project Brief</label>
+          <textarea id="fMessage" name="message" rows="4" placeholder="Let's build a cross-platform mobile app or integrate Gemini AI..." required></textarea>
+        </div>
+        <button type="submit" class="transmit-btn" id="transmitBtn">
+          <span>Transmit Message</span> <i class="fas fa-paper-plane"></i>
+        </button>
+        <p class="form-note" id="formNote">This opens your email client with the message pre-filled — no data is stored or sent anywhere else.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Rafi Ullah &middot; Portfolio Edition 2025</span>
+  <span>Crafted in Swat &amp; Islamabad</span>
+  <button id="backToTop" class="top-link">Top <span class="hud-key">[Esc]</span> <i class="fas fa-arrow-up"></i></button>
+</footer>
+
+<!-- ======================= VIDEO LIGHTBOX ======================= -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fas fa-xmark"></i></button>
+  <video id="lightboxVideo" controls playsinline></video>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
