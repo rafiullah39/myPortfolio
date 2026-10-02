@@ -1,0 +1,69 @@
+/* A moving toolkit, a scroll-led introduction, and a darker project gallery. */
+.hero{padding-top:clamp(30px,5vh,65px)}
+.hero h1{font-size:clamp(54px,7.9vw,130px);margin:22px 0 28px}
+.hero-bottom p{font-size:16px;line-height:1.75}
+.hero-footer{margin-top:0;padding:16px 0;background:transparent}
+.skills-ribbon{display:flex;align-items:center;border-top:1px solid #96b6ac;border-bottom:1px solid #96b6ac;margin-top:30px;min-height:48px;background:#edf4efaa;overflow:hidden}
+.ribbon-label{flex-shrink:0;font:700 9px 'Space Grotesk',sans-serif;letter-spacing:1.4px;color:#175d55;padding-right:23px}
+.ribbon-window{min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.ribbon-track{display:flex;width:max-content;animation:toolkit-drift 42s linear infinite}
+.ribbon-group{display:flex;flex-shrink:0;align-items:center}
+.ribbon-group>span{display:flex;align-items:center;gap:30px;padding-right:30px;white-space:nowrap;font:600 15px 'Space Grotesk',sans-serif;color:#183c35}
+.ribbon-group i{font-style:normal;font-size:15px;color:#278c7b}
+.skills-ribbon:hover .ribbon-track{animation-play-state:paused}
+@keyframes toolkit-drift{to{transform:translateX(-50%)}}
+.scroll-entry{opacity:var(--entry-opacity,1);transform:perspective(1100px) translate3d(var(--entry-x,0px),var(--entry-y,0px),0) rotateY(var(--entry-turn,0deg));filter:blur(var(--entry-blur,0px));will-change:transform,opacity;transition:none}
+.project-scenes .scene-panel{position:relative;background:radial-gradient(ellipse at 90% 15%,#1c4c43 0,transparent 55%),#101f1c;border:1px solid #427f70;color:#eff5f1;box-shadow:0 22px 45px #123f3026;isolation:isolate}
+.project-scenes .feature-title,.project-scenes .small-title{color:#f4faf5}
+.project-scenes .feature-desc,.project-scenes .small-desc{color:#c3d9cf}
+.project-scenes .feature-tag,.project-scenes .small-tag{color:#91d9c2}
+.project-scenes .feature-year,.project-scenes .small-year,.project-scenes .feature-checklist{color:#bfd3c8}
+.project-scenes .case-button{background:#bce9d6;color:#153d30;border:1px solid #d2f4e3;font-weight:700;transition:background .2s,translate .2s}
+.project-scenes .case-button:hover{background:#effff6;translate:3px -2px}
+.project-scenes .feature-footer,.project-scenes .small-footer{border-color:#487065;color:#b9cec3}
+.project-scenes .feature-footer a,.project-scenes .small-footer a{color:#a0e5cc}
+.project-scenes .scene-panel:before{content:attr(data-project-number);position:absolute;right:22px;top:3px;font:700 clamp(90px,14vw,185px)/1 'Space Grotesk',sans-serif;letter-spacing:-.08em;color:#a1e8ce09;z-index:-1;pointer-events:none}
+.project-scenes .scene-controls{position:relative;padding-bottom:13px;border-bottom:2px solid #d0ded6}
+.project-scenes .scene-controls:after{content:'';position:absolute;left:0;bottom:-2px;height:2px;width:var(--scene-progress,0%);background:#167d68}
+.project-scenes.is-pinned .scene-panel{border-left:1px solid #427f70;opacity:var(--card-opacity,0);transform:perspective(1300px) translate3d(var(--card-x,0px),var(--card-y,0px),0) rotateY(var(--card-turn,0deg)) scale(var(--card-scale,1));transition:none;will-change:transform,opacity}
+.project-scenes.is-pinned .scene-panel.is-active{pointer-events:auto}
+.project-scenes .daira-showcase{background:#24463a;border:1px solid #507d6c;border-radius:10px;padding:18px}
+.project-scenes .feature-checklist i{color:#9de3c6}
+.project-scenes.is-pinned .scene-panel:last-child:after{color:#7bbba2}
+.project-scenes .browser-frame,.project-scenes .project-capture{box-shadow:0 18px 35px #0005}
+@media(max-width:700px){.hero{padding-top:32px}.hero h1{font-size:clamp(43px,10.7vw,65px)}.hero-bottom p{font-size:14px}.skills-ribbon{margin-top:25px;min-height:44px}.ribbon-label{font-size:8px;padding-right:12px}.ribbon-group>span{font-size:13px;gap:20px;padding-right:20px}.hero-footer{font-size:9px;padding:16px 0}.project-scenes .daira-showcase{padding:10px}.project-scenes .scene-counter{display:none}}
+@media(prefers-reduced-motion:reduce){.ribbon-track{animation:none}.ribbon-window{overflow-x:auto}.ribbon-group[aria-hidden]{display:none}.scroll-entry{opacity:1;transform:none;filter:none}.project-scenes .scene-panel{will-change:auto}}
+.project-scenes.is-pinned .scene-panel{position:absolute}.project-scenes.is-pinned .scene-panels{flex-shrink:0}
+.project-scenes .browser-caption{color:#234d3d}.project-scenes .browser-tags{color:#246952}
+/* Light teal projects leave the darker AI films as the visual finale. */
+.hero{--hero-inset:5%}
+.skills-ribbon{margin-left:calc(var(--hero-inset) / -.9);margin-right:calc(var(--hero-inset) / -.9);padding-left:5%;padding-right:0}
+.ribbon-window{flex:1}
+.horizontal-projects .scene-panels{display:flex;position:relative;gap:24px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#2e8275 #dcece6;padding-bottom:14px;align-items:stretch}
+.horizontal-projects .scene-panel{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always;position:relative;opacity:1;transform:none;background:radial-gradient(ellipse at 95% 0,#c0e7df,transparent 65%),#e0eee8;color:#183d35;border:1px solid #79aca0;box-shadow:none;padding:32px;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-rows:auto auto auto 1fr auto;column-gap:35px;align-content:start;isolation:isolate}
+.horizontal-projects .feature-top,.horizontal-projects .small-top,.horizontal-projects .feature-title,.horizontal-projects .small-title,.horizontal-projects .case-button,.horizontal-projects .feature-desc,.horizontal-projects .small-desc{grid-column:1}
+.horizontal-projects .feature-title,.horizontal-projects .small-title{font-size:clamp(29px,3.2vw,49px);color:#123b31;margin:23px 0}
+.horizontal-projects .feature-desc,.horizontal-projects .small-desc{color:#35584e;font-size:15px}
+.horizontal-projects .feature-tag,.horizontal-projects .small-tag{color:#216d5e}
+.horizontal-projects .feature-year,.horizontal-projects .feature-checklist{color:#365f51}
+.horizontal-projects .case-button{background:#194e41;color:#fff;width:fit-content;margin-bottom:19px;border-color:#194e41}
+.horizontal-projects .case-button:hover{background:#267b65}
+.horizontal-projects .daira-showcase,.horizontal-projects .browser-frame,.horizontal-projects .project-capture{grid-column:2;grid-row:1/6;align-self:center;width:100%;min-width:0;margin:0}
+.horizontal-projects .daira-showcase{background:#c4ded2;border-color:#85b7a0;padding:18px}
+.horizontal-projects .phone-frame-track .phone-frame{height:clamp(220px,25vw,330px);width:30%;max-width:145px}
+.horizontal-projects .feature-checklist i{color:#216d5e}
+.horizontal-projects .project-capture{height:320px;object-fit:contain;box-shadow:none;background:#c4ded2}
+.horizontal-projects .browser-frame{box-shadow:none;max-height:none}
+.horizontal-projects .browser-screen-track img{height:clamp(180px,22vw,300px)}
+.horizontal-projects .feature-footer,.horizontal-projects .small-footer{grid-column:1/-1;grid-row:6;margin-top:30px;color:#315f4f;border-color:#90b6a7}
+.horizontal-projects .feature-footer a,.horizontal-projects .small-footer a{color:#1c6955}
+.horizontal-projects .scene-panel:before{color:#1f71640b}
+.horizontal-projects .scene-panel:last-child:after{content:'8086';grid-column:2;grid-row:1/6;align-self:center;text-align:center;font:700 clamp(70px,10vw,150px) 'Space Grotesk',sans-serif;color:#7dad99;letter-spacing:-.06em}
+.project-gallery-navigation{display:flex;align-items:center;justify-content:flex-end;gap:16px;margin-top:15px;font-size:12px;color:#326555}
+.project-gallery-hint{margin-right:auto}
+.project-gallery-navigation button{width:44px;height:40px;border-radius:25px;background:#194e41;color:white;border:1px solid #194e41;font-size:21px}
+.project-gallery-navigation button:disabled{opacity:.3;cursor:default}
+.project-gallery-navigation button:not(:disabled):hover{background:#287f69}
+.project-gallery-navigation>span:not(.project-gallery-hint){font-variant-numeric:tabular-nums;font-weight:700}
+html.wheel-softening{scroll-behavior:auto}
+@media(max-width:700px){.hero{--hero-inset:6%}.skills-ribbon{margin-left:-6.8181818%;margin-right:-6.8181818%;padding-left:6%}.horizontal-projects .scene-panel{display:flex;flex-direction:column;padding:22px;gap:0}.horizontal-projects .scene-panel .feature-title,.horizontal-projects .scene-panel .small-title{font-size:30px}.horizontal-projects .project-capture{height:240px}.horizontal-projects .feature-footer,.horizontal-projects .small-footer{margin-top:auto;padding-top:20px}.horizontal-projects .daira-showcase,.horizontal-projects .browser-frame,.horizontal-projects .project-capture{margin-bottom:22px}.horizontal-projects .phone-frame-track .phone-frame{height:190px}.horizontal-projects .scene-panel:last-child:after{font-size:95px;padding:35px 0}.project-gallery-navigation{flex-wrap:wrap;gap:12px}.project-gallery-hint{width:100%;font-size:11px}.horizontal-projects .scene-controls{gap:6px}.horizontal-projects .scene-controls button{font-size:10px;padding:8px 10px}}
