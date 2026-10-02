@@ -15,3 +15,10 @@ All five projects, eleven software skills, education, fellowship, certification,
 Run `python verify_portfolio.py` to check local asset references, unique element IDs, five case studies, and four videos. Run `node --check studio.js`, `node --check scroll-scenes.js`, and `node --check refinement.js` to check JavaScript syntax. `minimal.css` is the active theme; `studio.css` preserves the earlier design.
 
 The linked project repositories currently point to the owner's GitHub profile; individual repository URLs can be added when available. Local project source fixes are outside this portfolio repository.
+
+## Live site and updates
+
+Portfolio: https://rafi-builds.vercel.app/
+Repository: https://github.com/rafiullah39/myPortfolio
+
+Vercel project `rafi-builds` is connected to this repository. Push commits to its `main` branch to trigger production deployments automatically. Local edits must be committed and pushed before the live site changes. From the publishing worktree, use `git push origin HEAD:main`.
