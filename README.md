@@ -8,11 +8,11 @@ Off-white surfaces, teal and black accents, and a blurred abstract hero backgrou
 
 ## Content
 
-All five projects, eleven software skills, education, fellowship, certification, résumé, four videos, and contact links are included. Daira uses the supplied images. EduConnect, ClientFlow, and Blood Bank screenshots were captured from the local applications. EVM is presented through a written case study only. The original EduConnect images remain in the asset folder.
+All six projects, eleven software skills, education, fellowship, certification, résumé, four videos, and contact links are included. SelfText appears first, followed by Daira, ClientFlow CRM, Blood Bank, EVM and EduConnect. SelfText uses actual Flutter UI captures with demonstration records. Daira uses the supplied images. EduConnect, ClientFlow, and Blood Bank screenshots were captured from the local applications. EVM is presented through a written case study only. The original EduConnect images remain in the asset folder.
 
 ## Checks
 
-Run `python verify_portfolio.py` to check local asset references, unique element IDs, five case studies, and four videos. Run `node --check studio.js`, `node --check scroll-scenes.js`, and `node --check refinement.js` to check JavaScript syntax. `minimal.css` is the active theme; `studio.css` preserves the earlier design.
+Run `python verify_portfolio.py` to check local asset references, unique element IDs, six case studies, and four videos. Run `node --check studio.js`, `node --check scroll-scenes.js`, and `node --check refinement.js` to check JavaScript syntax. `minimal.css` is the active theme; `studio.css` preserves the earlier design.
 
 The linked project repositories currently point to the owner's GitHub profile; individual repository URLs can be added when available. Local project source fixes are outside this portfolio repository.
 

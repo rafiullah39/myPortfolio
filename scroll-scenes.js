@@ -1,7 +1,8 @@
 // Projects move sideways without consuming the page's vertical scroll.
 const projectSection = document.getElementById('projects');
-const projectCards = [...projectSection.querySelectorAll('.feature-card, .small-card')];
-const projectLabels = ['Daira', 'EduConnect', 'ClientFlow', 'Blood Bank', 'EVM'];
+const projectOrder = ['selftext', 'daira', 'crm', 'blood', 'evm', 'edu'];
+const projectCards = projectOrder.map(key => projectSection.querySelector(`[data-project="${key}"]`));
+const projectLabels = projectCards.map(card => card.dataset.projectLabel);
 const projectSequence = document.createElement('div');
 projectSequence.className = 'project-scenes horizontal-projects';
 const projectControls = document.createElement('nav');
@@ -55,7 +56,7 @@ let currentProject = 0;
 function updateProjectGallery() {
   currentProject = projectCards.reduce((best, card, index) => Math.abs(card.offsetLeft - projectCards[0].offsetLeft - projectTrack.scrollLeft) < Math.abs(projectCards[best].offsetLeft - projectCards[0].offsetLeft - projectTrack.scrollLeft) ? index : best, 0);
   projectTabs.forEach((button,index) => button.setAttribute('aria-current', String(index === currentProject)));
-  galleryPosition.textContent = `${String(currentProject + 1).padStart(2,'0')} / 05`;
+  galleryPosition.textContent = `${String(currentProject + 1).padStart(2,'0')} / ${String(projectCards.length).padStart(2,'0')}`;
   galleryPrevious.disabled = currentProject === 0;
   galleryNext.disabled = currentProject === projectCards.length - 1;
   projectSequence.style.setProperty('--scene-progress', `${(currentProject + 1) / projectCards.length * 100}%`);

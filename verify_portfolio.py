@@ -14,5 +14,7 @@ p=Inventory();p.feed(Path('index.html').read_text(encoding='utf-8-sig'))
 missing=[r for r in p.refs if not Path(r).is_file()]
 assert not missing, missing
 assert len(p.ids)==len(set(p.ids)), 'Duplicate IDs'
-assert p.cases==5 and p.videos==4
-print(f'PASS: {len(p.refs)} local asset references, 5 project case studies, 4 videos, unique IDs.')
+assert p.cases==6 and p.videos==4
+assert '2024 — Present' in Path('index.html').read_text(encoding='utf-8-sig')
+assert '2022 — Present' not in Path('index.html').read_text(encoding='utf-8-sig')
+print(f'PASS: {len(p.refs)} local asset references, 6 project case studies, 4 videos, unique IDs.')

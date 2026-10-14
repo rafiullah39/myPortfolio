@@ -44,7 +44,7 @@
           <div class="mini-item">
             <span class="mini-dot mini-dot--cyan"></span>
             <div>
-              <p class="mini-title">2022 — Present</p>
+              <p class="mini-title">2024 — Present</p>
               <p class="mini-body">Air University Islamabad</p>
               <p class="mini-meta">BS Computer Science &middot; <span class="accent-cyan">CGPA 3.13</span></p>
             </div>
@@ -152,8 +152,26 @@
 
   <div class="feature-grid">
 
+
+    <!-- SELFTEXT: actual Flutter UI screenshots with demonstration records -->
+    <article class="feature-card reveal" data-project="selftext" data-project-label="SelfText">
+      <div class="feature-top"><span class="feature-tag">Mobile · Flutter + FastAPI</span><span class="feature-year">2026 · Android app</span></div>
+      <h3 class="feature-title">SelfText — Chat to tasks</h3><button class="case-button" data-case="selftext">Inside the build ↗</button>
+      <p class="feature-desc">A personal productivity app where you message yourself, turn thoughts into notes, tasks and reminders, and review AI-generated plans before saving them. Chats, task lists and a calendar keep everything connected.</p>
+      <div class="daira-showcase selftext-showcase">
+        <div class="phone-frame-track" aria-label="SelfText app screenshots">
+          <div class="phone-frame"><img src="assets/selftext/dashboard.png" alt="SelfText's real dashboard with Tasks and reminders, Notepad, and personal chats" loading="lazy" class="zoomable" tabindex="0" role="button" aria-label="Enlarge SelfText dashboard screenshot"></div>
+          <div class="phone-frame"><img src="assets/selftext/tasks.png" alt="SelfText's real task list showing a demonstration assignment reminder" loading="lazy" class="zoomable" tabindex="0" role="button" aria-label="Enlarge SelfText tasks screenshot"></div>
+          <div class="phone-frame"><img src="assets/selftext/calendar.png" alt="SelfText's real calendar with a demonstration task and reminder times" loading="lazy" class="zoomable" tabindex="0" role="button" aria-label="Enlarge SelfText calendar screenshot"></div>
+        </div>
+        <p class="selftext-screen-note">Actual app UI · demonstration records</p>
+        <ul class="feature-checklist"><li><i class="fas fa-check"></i> Chat-based capture</li><li><i class="fas fa-check"></i> Review before saving</li><li><i class="fas fa-check"></i> Tasks &amp; calendar</li></ul>
+      </div>
+      <div class="feature-footer"><span class="feature-hashtags">#Flutter #FastAPI #Firebase</span><span>Android · Python · PostgreSQL</span></div>
+    </article>
+
     <!-- DAIRA -->
-    <article class="feature-card reveal">
+    <article class="feature-card reveal" data-project="daira" data-project-label="Daira">
       <div class="feature-top">
         <span class="feature-tag feature-tag--cyan">Mobile &middot; Flutter + AI</span>
         <span class="feature-year">2024 — Active</span>
@@ -187,7 +205,55 @@
     </article>
 
     <!-- EDUCONNECT -->
-    <article class="feature-card reveal">
+
+  </div>
+
+  <div class="small-grid">
+    <article class="small-card reveal" data-project="crm" data-project-label="ClientFlow">
+      <div class="small-top">
+        <span class="small-tag accent-cyan"><i class="fas fa-diagram-project"></i> CRM App</span>
+        <span class="feature-year">2024</span>
+      </div>
+      <h4 class="small-title">ClientFlow CRM</h4><button class="case-button" data-case="crm">Inside the build ↗</button>
+      <p class="small-desc">Clean client lifecycle and relationship management platform with dynamic
+        reporting dashboards and SQL Server persistence.</p>
+      <img class="project-capture zoomable" src="assets/clientflow/home.png" alt="ClientFlow CRM running locally: customer management, AI assistant, invoicing, and meetings" loading="lazy" tabindex="0" role="button" aria-label="Enlarge ClientFlow screenshot">
+      <div class="small-footer">
+        <span>Blazor / SQL</span>
+        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-cyan">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+
+    <article class="small-card reveal" data-project="blood" data-project-label="Blood Bank">
+      <div class="small-top">
+        <span class="small-tag accent-red"><i class="fas fa-heart-pulse"></i> Desktop</span>
+        <span class="feature-year">2023</span>
+      </div>
+      <h4 class="small-title">Blood Bank MS</h4><button class="case-button" data-case="blood">Inside the build ↗</button>
+      <p class="small-desc">Desktop management suite for hospital blood bank inventory, donor tracking,
+        and emergency blood matching workflows.</p>
+      <img class="project-capture zoomable" src="assets/blood-bank/main.jpg" alt="Blood Bank desktop application with donor, inventory, campaign, and record management controls" loading="lazy" tabindex="0" role="button" aria-label="Enlarge Blood Bank screenshot">
+      <div class="small-footer">
+        <span>Java / SQL Server</span>
+        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-red">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+
+    <article class="small-card reveal" data-project="evm" data-project-label="EVM">
+      <div class="small-top">
+        <span class="small-tag accent-yellow"><i class="fas fa-gear"></i> Hardware / ASM</span>
+        <span class="feature-year">2023</span>
+      </div>
+      <h4 class="small-title">EVM in 8086 ASM</h4><button class="case-button" data-case="evm">Inside the build ↗</button>
+      <p class="small-desc">Electronic Voting Machine written right in x86 microprocessor assembly —
+        engineered core candidate voting routines and memory buffers.</p>
+      <div class="small-footer">
+        <span>EMU8086 / ASM</span>
+        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-yellow">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </article>
+
+    <article class="feature-card reveal" data-project="edu" data-project-label="EduConnect">
       <div class="feature-top">
         <span class="feature-tag feature-tag--purple"><i class="fas fa-square"></i> Web &middot; Blazor Server</span>
         <span class="feature-year">2024</span>
@@ -215,52 +281,6 @@
       <div class="feature-footer">
         <span class="feature-hashtags">#Blazor #C# #SOLID</span>
         <a class="feature-link" href="https://github.com/rafiullah39" target="_blank" rel="noopener">Case Code <i class="fas fa-arrow-up-right-from-square"></i></a>
-      </div>
-    </article>
-  </div>
-
-  <div class="small-grid">
-    <article class="small-card reveal">
-      <div class="small-top">
-        <span class="small-tag accent-cyan"><i class="fas fa-diagram-project"></i> CRM App</span>
-        <span class="feature-year">2024</span>
-      </div>
-      <h4 class="small-title">ClientFlow CRM</h4><button class="case-button" data-case="crm">Inside the build ↗</button>
-      <p class="small-desc">Clean client lifecycle and relationship management platform with dynamic
-        reporting dashboards and SQL Server persistence.</p>
-      <img class="project-capture zoomable" src="assets/clientflow/home.png" alt="ClientFlow CRM running locally: customer management, AI assistant, invoicing, and meetings" loading="lazy" tabindex="0" role="button" aria-label="Enlarge ClientFlow screenshot">
-      <div class="small-footer">
-        <span>Blazor / SQL</span>
-        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-cyan">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
-      </div>
-    </article>
-
-    <article class="small-card reveal">
-      <div class="small-top">
-        <span class="small-tag accent-red"><i class="fas fa-heart-pulse"></i> Desktop</span>
-        <span class="feature-year">2023</span>
-      </div>
-      <h4 class="small-title">Blood Bank MS</h4><button class="case-button" data-case="blood">Inside the build ↗</button>
-      <p class="small-desc">Desktop management suite for hospital blood bank inventory, donor tracking,
-        and emergency blood matching workflows.</p>
-      <img class="project-capture zoomable" src="assets/blood-bank/main.jpg" alt="Blood Bank desktop application with donor, inventory, campaign, and record management controls" loading="lazy" tabindex="0" role="button" aria-label="Enlarge Blood Bank screenshot">
-      <div class="small-footer">
-        <span>Java / SQL Server</span>
-        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-red">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
-      </div>
-    </article>
-
-    <article class="small-card reveal">
-      <div class="small-top">
-        <span class="small-tag accent-yellow"><i class="fas fa-gear"></i> Hardware / ASM</span>
-        <span class="feature-year">2023</span>
-      </div>
-      <h4 class="small-title">EVM in 8086 ASM</h4><button class="case-button" data-case="evm">Inside the build ↗</button>
-      <p class="small-desc">Electronic Voting Machine written right in x86 microprocessor assembly —
-        engineered core candidate voting routines and memory buffers.</p>
-      <div class="small-footer">
-        <span>EMU8086 / ASM</span>
-        <a href="https://github.com/rafiullah39" target="_blank" rel="noopener" class="repo-link accent-yellow">Repo <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
     </article>
   </div>
