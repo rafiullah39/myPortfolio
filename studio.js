@@ -1,6 +1,6 @@
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(!reducedMotion)document.body.classList.add('motion-ready');
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');entry.target.querySelectorAll('[data-pct]').forEach(bar=>bar.style.width=bar.dataset.pct+'%');observer.unobserve(entry.target)}}),{threshold:.08});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target)}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 if(!reducedMotion&&matchMedia('(pointer: fine)').matches)document.querySelectorAll('.tilt').forEach(card=>{card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.transform=`perspective(850px) rotateX(${-(e.clientY-r.top-r.height/2)/r.height*7}deg) rotateY(${(e.clientX-r.left-r.width/2)/r.width*7}deg)`});card.addEventListener('pointerleave',()=>card.style.transform='')});
 const progress=document.querySelector('.reading-progress');function updateProgress(){const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
