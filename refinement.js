@@ -28,6 +28,7 @@ updateEntrances();
 document.querySelectorAll('.browser-screen-track').forEach((track, galleryIndex) => {
   track.id ||= `project-gallery-${galleryIndex}`;
   const images = [...track.querySelectorAll('img')];
+  const galleryName = track.closest('[data-project-label]')?.dataset.projectLabel || 'Project';
   const controls = document.createElement('div');
   controls.className = 'gallery-controls';
   const previous = document.createElement('button');
@@ -36,8 +37,8 @@ document.querySelectorAll('.browser-screen-track').forEach((track, galleryIndex)
   previous.type = next.type = 'button';
   previous.textContent = '←';
   next.textContent = '→';
-  previous.setAttribute('aria-label', 'Previous EduConnect screenshot');
-  next.setAttribute('aria-label', 'Next EduConnect screenshot');
+  previous.setAttribute('aria-label', `Previous ${galleryName} screenshot`);
+  next.setAttribute('aria-label', `Next ${galleryName} screenshot`);
   previous.setAttribute('aria-controls', track.id);
   next.setAttribute('aria-controls', track.id);
   status.className = 'gallery-status';

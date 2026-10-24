@@ -1,6 +1,6 @@
 // Projects move sideways without consuming the page's vertical scroll.
 const projectSection = document.getElementById('projects');
-const projectOrder = ['selftext', 'daira', 'crm', 'blood', 'evm', 'edu'];
+const projectOrder = ['selftext', 'naya', 'daira', 'crm', 'blood', 'evm', 'edu'];
 const projectCards = projectOrder.map(key => projectSection.querySelector(`[data-project="${key}"]`));
 const projectLabels = projectCards.map(card => card.dataset.projectLabel);
 const projectSequence = document.createElement('div');
