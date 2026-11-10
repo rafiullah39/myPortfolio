@@ -23,4 +23,4 @@ Repository: https://github.com/rafiullah39/myPortfolio
 
 Vercel project `rafi-builds` is connected to this repository. Push commits to its `main` branch to trigger production deployments automatically. Local edits must be committed and pushed before the live site changes. From the publishing worktree, use `git push origin HEAD:main`.
 
-Naya Purana Store is linked to its public sample deployment at https://naya-purana.netlify.app/. Its source repository remains private. Store screenshots show the real public UI, and the case study explicitly identifies the sample/closed-ordering status. The downloadable resume includes Naya Purana second.
+Naya Purana Store is linked to its public sample deployment at https://naya-purana.netlify.app/. Its source repository remains private. Store screenshots show the real public UI, and the case study explicitly identifies the sample/closed-ordering status. The Résumé button downloads the latest supplied PDF from `assets/Rafi_Ullah_CV.pdf`; the editable DOCX is also included at `assets/Rafi_Ullah_CV.docx`.
